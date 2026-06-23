@@ -12,10 +12,10 @@ const initialItems = [
 ];
 
 export default function Invoice() {
-  const componentRef = useRef();
+  const componentRef = useRef(null);
   
   const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
+    contentRef: componentRef,
     documentTitle: 'Proforma_Invoice',
   });
 
